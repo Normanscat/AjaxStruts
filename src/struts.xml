@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="default-package" extends="struts-default, json-default">
+		<!-- 查询用户 -->
+		<action name="user" class="online.shixun.hpeu.action.UserAction"
+			method="list">
+			<result name="success">/WEB-INF/views/user.jsp</result>
+		</action>
+		<!-- 关键字查询 -->
+		<action name="searchuser" class="online.shixun.hpeu.action.UserAction"
+			method="searchuser">
+			<result name="success">/WEB-INF/views/user.jsp</result>
+		</action>
+		<!-- 跳转页面-添加用户 -->
+		<action name="adduser" class="online.shixun.hpeu.action.UserAction"
+			method="adduser">
+			<result>/WEB-INF/views/useradd.jsp</result>
+		</action>
+		<!-- 添加用户 -->
+		<action name="saveuser" class="online.shixun.hpeu.action.UserAction"
+			method="saveuser">
+			<result name="success" type="json"></result>
+			<result name="flase" type="json"></result>
+		</action>
+		<!-- 跳转页面-编辑用户 -->
+		<action name="edituser" class="online.shixun.hpeu.action.UserAction"
+			method="edituser">
+			<result name="success">/WEB-INF/views/useredit.jsp</result>
+		</action>
+		<!-- 更新用户 -->
+		<action name="upuser" class="online.shixun.hpeu.action.UserAction"
+			method="upuser">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 删除用户 -->
+		<action name="delete" class="online.shixun.hpeu.action.UserAction"
+			method="deluser">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 批量删除用户 -->
+		<action name="deluserall" class="online.shixun.hpeu.action.UserAction"
+			method="deluserall">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询权限 -->
+		<action name="juri" class="online.shixun.hpeu.action.JuriAction"
+			method="list">
+			<result name="success">/WEB-INF/views/juri.jsp</result>
+		</action>
+		<!-- 关键字查询权限 -->
+		<action name="searchjuri" class="online.shixun.hpeu.action.JuriAction"
+			method="searchjuri">
+			<result name="success">/WEB-INF/views/juri.jsp</result>
+		</action>
+		<!-- 跳转页面-添加权限 -->
+		<action name="addjuri">
+			<result>/WEB-INF/views/juriadd.jsp</result>
+		</action>
+		<!-- 添加权限 -->
+		<action name="savejuri" class="online.shixun.hpeu.action.JuriAction"
+			method="savejuri">
+			<result name="success" type="json"></result>
+			<result name="flase" type="json"></result>
+		</action>
+		<!-- 跳转页面-编辑权限 -->
+		<action name="editjuri" class="online.shixun.hpeu.action.JuriAction"
+			method="editjuri">
+			<result name="success">/WEB-INF/views/juriedit.jsp</result>
+		</action>
+		<!-- 更新权限 -->
+		<action name="upjuri" class="online.shixun.hpeu.action.JuriAction"
+			method="upjuri">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 删除权限 -->
+		<action name="juridelete" class="online.shixun.hpeu.action.JuriAction"
+			method="deljuri">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 批量删除权限 -->
+		<action name="deljuriall" class="online.shixun.hpeu.action.JuriAction"
+			method="deljuriall">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询角色 -->
+		<action name="role" class="online.shixun.hpeu.action.RoleAction"
+			method="list">
+			<result name="success">/WEB-INF/views/role.jsp</result>
+		</action>
+		<!-- 关键字查询 -->
+		<action name="searchrole" class="online.shixun.hpeu.action.RoleAction"
+			method="searchrole">
+			<result name="success">/WEB-INF/views/role.jsp</result>
+		</action>
+		<!-- 跳转页面-添加角色 -->
+		<action name="addrole">
+			<result>/WEB-INF/views/roleadd.jsp</result>
+		</action>
+		<!-- 添加角色 -->
+		<action name="saverole" class="online.shixun.hpeu.action.RoleAction"
+			method="saverole">
+			<result name="success" type="json"></result>
+			<result name="flase" type="json"></result>
+		</action>
+		<!-- 跳转页面 -编辑角色 -->
+		<action name="editrole" class="online.shixun.hpeu.action.RoleAction"
+			method="editrole">
+			<result name="success">/WEB-INF/views/roleedit.jsp</result>
+		</action>
+		<!-- 更新角色 -->
+		<action name="uprole" class="online.shixun.hpeu.action.RoleAction"
+			method="uprole">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 删除角色 -->
+		<action name="roledelete" class="online.shixun.hpeu.action.RoleAction"
+			method="delrole">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 批量删除角色 -->
+		<action name="delroleall" class="online.shixun.hpeu.action.RoleAction"
+			method="delroleall">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询部门 -->
+		<action name="dep" class="online.shixun.hpeu.action.DepAction"
+			method="list">
+			<result name="success">/WEB-INF/views/dep.jsp</result>
+		</action>
+		<!-- 关键字查询部门 -->
+		<action name="searchdep" class="online.shixun.hpeu.action.DepAction"
+			method="searchdep">
+			<result name="success">/WEB-INF/views/dep.jsp</result>
+		</action>
+		<!-- 跳转页面-添加部门 -->
+		<action name="adddep">
+			<result>/WEB-INF/views/depadd.jsp</result>
+		</action>
+		<!-- 添加部门 -->
+		<action name="savedep" class="online.shixun.hpeu.action.DepAction"
+			method="savedep">
+			<result name="success" type="json"></result>
+			<result name="flase" type="json"></result>
+		</action>
+		<!-- 删除部门 -->
+		<action name="depdelete" class="online.shixun.hpeu.action.DepAction"
+			method="deldep">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 批量删除部门 -->
+		<action name="deldepall" class="online.shixun.hpeu.action.DepAction"
+			method="deldepall">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 跳转页面-编辑部门 -->
+		<action name="editdep" class="online.shixun.hpeu.action.DepAction"
+			method="editdep">
+			<result name="success">/WEB-INF/views/depedit.jsp</result>
+		</action>
+		<!-- 更新部门 -->
+		<action name="updep" class="online.shixun.hpeu.action.DepAction"
+			method="updep">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 登入验证 -->
+		<action name="loginaction" class="online.shixun.hpeu.action.LoginAction"
+			method="login">
+			<result name="success">/index.jsp</result>
+			<result name="false">/login.jsp</result>
+		</action>
+		<!-- 退出 -->
+		<action name="exit">
+			<result>/login.jsp</result>
+		</action>
+	</package>
+</struts>
